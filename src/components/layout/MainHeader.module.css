@@ -1,0 +1,114 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 28px;
+  background: linear-gradient(110deg, #ffffff 55%, #eef3f9 100%);
+  border-radius: 16px;
+  border: 1px solid #dce5e1;
+  box-shadow: 0 4px 16px rgba(28, 65, 56, 0.03);
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.headline {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  border: 1px solid transparent;
+  backdrop-filter: blur(6px);
+}
+
+.tab:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(22, 135, 120, 0.18);
+}
+
+.tabActive {
+  background: linear-gradient(135deg, rgba(22, 135, 120, 0.95) 0%, rgba(17, 107, 96, 0.95) 100%);
+  color: #fff;
+  border-color: rgba(17, 107, 96, 0.55);
+  box-shadow: 0 16px 36px rgba(22, 135, 120, 0.32);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filterButton {
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(22, 135, 120, 0.28);
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButtonActive {
+  border-color: transparent;
+  background: var(--color-primary-strong);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(22, 135, 120, 0.28);
+}
+
+.extras {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 24px;
+  }
+
+  .topRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .extras {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,106 @@
+.editor{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    position: relative;
+}
+
+.textarea{
+    width:100%;
+    min-height: 64px;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    outline: none;
+    background:var(--color-surface);
+    color:var(--color-text);
+    line-height:1.6;
+    resize: vertical;
+
+}
+.textarea:focus{
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255,238,65,0.12);
+}
+
+.controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.submit {
+    padding: 8px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit:disabled {
+    opacity: 0.55;
+    cursor: default;
+}
+
+.cancel {
+    padding: 8px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 13px;
+}
+
+.successToast {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    background: #16a34a;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    z-index: 5;
+    animation: successIn 0.2s ease-out;
+}
+
+@keyframes successIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.loginTip {
+    padding: 14px;
+    border: 1px dashed var(--color-border);
+    border-radius: 14px;
+    background: var(--color-surface-soft);
+    text-align: center;
+}
+
+.loginTip button {
+    border: 0;
+    background: transparent;
+    color: var(--color-primary-strong);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.compact .textarea {
+    min-height: 48px;
+    padding: 10px 12px;
+}
